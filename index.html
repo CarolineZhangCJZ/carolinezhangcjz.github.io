@@ -39,18 +39,8 @@
     },
     "description": "Caroline Jinglan Zhang is a PhD candidate at UCSB with research interests in behavioral finance, behavioral economics, and experimental economics."
   }
-  
-</script>
 
-<script>
-    document.getElementById("displaybutton").addEventListener("click", function() {
-        var toggletext = document.getElementById("displaytext");
-        if (window.getComputedStyle(toggletext).display === "none") {
-                toggletext.style.display = "block";
-        } else {
-                toggletext.style.display = "none";
-        }
-    });
+  
 </script>
 
     <style>
@@ -59,18 +49,9 @@
             margin-top: 10px;
         }
       
-      .togglebutton {
-    background-color: #FFB814;
-    width: 200px;
-    height: 60px;
-    border-radius: 14px;
-    padding: 10px 20px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    font-family: verdana;
-    margin-bottom: 20px;
-}
+        .togglebutton {
+            background-color: #FFB814;
+        }
     </style>
 
   <link rel="icon" href="images/icon.png" type="image/x-icon">
@@ -200,6 +181,15 @@
  </div> 
 
 
+<script>
+      document.getElementById("displaybutton").addEventListener("click", function() {
+        var toggletext = document.getElementById("displaytext");
+        if (window.getComputedStyle(toggletext).display === "none") {
+                toggletext.style.display = "block";
+        } else {
+                toggletext.style.display = "none";
+        }
+    })
 </script>
 </body>
 </html>
