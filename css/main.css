@@ -32,7 +32,7 @@ body {
     flex: 0 0 280px;
     max-width: 100%;
     display: flex;
-    align-items: bottom; /* Center image vertically */
+    align-items: flex-end; /* Center image vertically */
 }
 
 .profilePicture img {
