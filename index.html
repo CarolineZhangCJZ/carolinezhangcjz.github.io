@@ -39,9 +39,28 @@
     },
     "description": "Caroline Jinglan Zhang is a PhD candidate at UCSB with research interests in behavioral finance, behavioral economics, and experimental economics."
   }
+
+      function toggleAbstract() {
+        const abstract = document.getElementById("abstract");
+        const button = document.querySelector("button");
+
+        if (abstract.style.display === "none") {
+            abstract.style.display = "block";
+            button.textContent = "Hide Abstract";
+        } else {
+            abstract.style.display = "none";
+            button.textContent = "Show Abstract";
+        }
+    }
+  
 </script>
 
-
+    <style>
+        #abstract {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
 
   <link rel="icon" href="images/icon.png" type="image/x-icon">
   <title>Caroline Jinglan Zhang - Homepage</title> 
@@ -102,7 +121,8 @@
        <h3 id="papers">Working Papers</h3>
        <hr>
        <p><strong>The Feedback-Driven Disposition Effect: An Experiment</strong> <a href="https://www.dropbox.com/scl/fi/6iafit7ay32a5fgpccaw4/JMP_CJZ.pdf?rlkey=csw03eel6egpvkhf6wtivv7ry&st=c3zkkwne&dl=0" target="_blank">[pdf]</a><br>Job Market Paper</p>
-      </div>
+      <button onclick="toggleAbstract()">Show Abstract</button>
+     </div>
     </div>
   
   <br>
