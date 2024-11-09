@@ -202,16 +202,23 @@
 
 
 <script>
-      document.getElementById("displaybutton").addEventListener("click", function() {
-        var toggletext = document.getElementById("displaytext");
-        if (window.getComputedStyle(toggletext).display === "none") {
-                toggletext.style.display = "block";
+    // Select all buttons with the "displayButton" class
+    document.querySelectorAll(".displayButton").forEach(button => {
+        button.addEventListener("click", function() {
+            // Get the target text ID from the button's data attribute
+            const targetId = button.getAttribute("data-target");
+            const toggleText = document.getElementById(targetId);
+
+            // Toggle the display of the target text and update the button text
+            if (window.getComputedStyle(toggleText).display === "none") {
+                toggleText.style.display = "block";
                 button.textContent = "[-]";
-        } else {
-                toggletext.style.display = "none";
+            } else {
+                toggleText.style.display = "none";
                 button.textContent = "[+]";
-        }
-    })
+            }
+        });
+    });
 </script>
 </body>
 </html>
