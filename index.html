@@ -43,18 +43,14 @@
 </script>
 
 <script>
-        function toggleAbstract() {
-        const abstract = document.getElementById("abstract");
-        const button = document.querySelector("button");
-
-        if (abstract.style.display === "none") {
-            abstract.style.display = "block";
-            button.textContent = "Hide Abstract";
+    document.getElementById("displaybutton").addEventListener("click", function() {
+        var toggletext = document.getElementById("displaytext");
+        if (window.getComputedStyle(toggletext).display === "none") {
+                toggletext.style.display = "block";
         } else {
-            abstract.style.display = "none";
-            button.textContent = "Show Abstract";
+                toggletext.style.display = "none";
         }
-    }
+    });
 </script>
 
     <style>
@@ -62,6 +58,19 @@
             display: none;
             margin-top: 10px;
         }
+      
+      .togglebutton {
+    background-color: #FFB814;
+    width: 200px;
+    height: 60px;
+    border-radius: 14px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    font-family: verdana;
+    margin-bottom: 20px;
+}
     </style>
 
   <link rel="icon" href="images/icon.png" type="image/x-icon">
@@ -123,10 +132,13 @@
        <h3 id="papers">Working Papers</h3>
        <hr>
        <p><strong>The Feedback-Driven Disposition Effect: An Experiment</strong> <a href="https://www.dropbox.com/scl/fi/6iafit7ay32a5fgpccaw4/JMP_CJZ.pdf?rlkey=csw03eel6egpvkhf6wtivv7ry&st=c3zkkwne&dl=0" target="_blank">[pdf]</a><br>Job Market Paper</p>
-      <button onclick="toggleAbstract()">Show Abstract</button>
-       <div id="abstract">
-      <p>This is the abstract of the research paper. It provides a brief overview of the study, its methods, and findings.</p>
-      </div>
+    <div class="displaybuttonstyle">
+    <button class="togglebutton" id="displaybutton" type="button">Payment Rules</button>
+    </div>
+    <div style="display: none;" id="displaytext" >
+       To determine whether you win the extra $1 in PART Two:
+    </div>
+
      </div>
     </div>
   
