@@ -202,23 +202,41 @@
 
 
 <script>
-    // Select all buttons with the "displayButton" class
-    document.querySelectorAll(".displayButton").forEach(button => {
-        button.addEventListener("click", function() {
-            // Get the target text ID from the button's data attribute
-            const targetId = button.getAttribute("data-target");
-            const toggleText = document.getElementById(targetId);
-
-            // Toggle the display of the target text and update the button text
-            if (window.getComputedStyle(toggleText).display === "none") {
-                toggleText.style.display = "block";
+  document.getElementById("displaybutton").addEventListener("click", function() {
+        
+        var toggletext = document.getElementById("displaytext");
+        if (window.getComputedStyle(toggletext).display === "none") {
+                toggletext.style.display = "block";
                 button.textContent = "[-]";
-            } else {
-                toggleText.style.display = "none";
+        } else {
+                toggletext.style.display = "none";
                 button.textContent = "[+]";
-            }
-        });
-    });
+        }
+    })
+
+    document.getElementById("displaybutton1").addEventListener("click", function() {
+        
+        var toggletext = document.getElementById("displaytext1");
+        if (window.getComputedStyle(toggletext).display === "none") {
+                toggletext.style.display = "block";
+                button.textContent = "[-]";
+        } else {
+                toggletext.style.display = "none";
+                button.textContent = "[+]";
+        }
+    })
+
+    document.getElementById("displaybutton2").addEventListener("click", function() {
+        
+        var toggletext = document.getElementById("displaytext2");
+        if (window.getComputedStyle(toggletext).display === "none") {
+                toggletext.style.display = "block";
+                button.textContent = "[-]";
+        } else {
+                toggletext.style.display = "none";
+                button.textContent = "[+]";
+        }
+    })
 </script>
 </body>
 </html>
