@@ -122,11 +122,11 @@ blockquote {
 
 strong {
     font-weight: bolder;
-    font-style: italic;
+    /*font-style: italic;*/
     /* text-decoration: underline */
 }
 
-strong {
+b {
     font-weight: bolder;
     /* text-decoration: underline */
 }
