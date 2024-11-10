@@ -120,9 +120,14 @@ blockquote {
     margin: 0 0 1rem
 }
 
-b,strong {
+strong {
     font-weight: bolder;
     font-style: italic;
+    /* text-decoration: underline */
+}
+
+strong {
+    font-weight: bolder;
     /* text-decoration: underline */
 }
 
